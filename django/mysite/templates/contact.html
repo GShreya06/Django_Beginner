@@ -12,7 +12,7 @@
   {% comment %}Form syntax{% endcomment %}
   <div class="container mb-3 py-4">
     <h1 class="text-center">Contact Us</h1>
-    <form method="post" action="/contact">
+    <form method="post" action="/contact/">
     {% csrf_token %}
         <div class="form-group">
             <label for="name">Name</label>
@@ -35,7 +35,6 @@
         </div>
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>
-
 </div>
 
 {% endblock %}

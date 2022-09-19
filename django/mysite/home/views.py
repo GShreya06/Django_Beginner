@@ -23,11 +23,11 @@ def services(request):
     #return HttpResponse("This is services Page")
 
 def contact(request):
-    if request.method == "post":
-        name =Request.post.get('name')
-        email = Request.post.get('email')
-        phone = Request.post.get('phone')
-        desc = Request.post.get('desc')
+    if request.method == "POST":
+        name =request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        desc = request.POST.get('desc')
         contact = Contact(name=name , email= email , phone =phone , desc =desc,date=datetime.today())
         contact.save()
     return render(request,'contact.html')

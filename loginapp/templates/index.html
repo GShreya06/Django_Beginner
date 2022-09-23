@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Tech-World</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logged in User | Homepage</title>
+  </head>
+  <body>
+    {% csrf_token %}
+    <h1>Welcome to our Homepage!</h1>
+    welcome {{ request.user }}
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laborum nihil amet, ducimus odio dicta!</p>
+    <a href="/logout">Logout</a>
+  </body>
 </html>
